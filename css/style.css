@@ -1,6 +1,7 @@
 body {
   font-family: "Montserrat", sans-serif;
   height: 100%;
+  background-color: grey;
 }
 
 .grid-container {
@@ -23,6 +24,29 @@ nav {
 
 main {
   grid-area: main;
+}
+
+.bell-icon {
+  width: 30px;
+}
+
+.my-profile-pic {
+  border-radius: 60%;
+  height: 50px;
+  width: 40px;
+}
+
+header h1,
+.bell-icon,
+header div,
+.my-profile-pic,
+header h3 {
+  display: inline;
+}
+
+nav a img {
+  height: 60px;
+  margin: 10px auto;
 }
 
 @media (min-width: 768px) {
@@ -63,9 +87,4 @@ main {
 
 .main {
   display: grid;
-}
-
-.my-profile-pic {
-  width: 480px;
-  height: 640px;
 }

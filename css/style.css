@@ -1,7 +1,6 @@
 body {
   font-family: "Montserrat", sans-serif;
   height: 100%;
-  background-color: grey;
 }
 
 .grid-container {
@@ -18,8 +17,30 @@ header {
   grid-area: header;
 }
 
+header {
+  display: grid;
+  justify-content: start;
+  grid-template-columns: repeat(auto-fit, minmax(25px, 80px));
+  grid-gap: 5px;
+  background-color: rgb(116, 119, 191);
+}
+
+header h1 {
+  margin-right: 50px;
+}
+header .noti-div {
+  margin-left: 60px;
+}
+header img {
+  margin-left: 150px;
+}
+header h3 {
+  margin-left: 180px;
+}
+
 nav {
   grid-area: navigation;
+  background-color: rgb(77, 76, 114);
 }
 
 main {
@@ -31,17 +52,16 @@ main {
 }
 
 .my-profile-pic {
-  border-radius: 60%;
+  border-radius: 50%;
   height: 50px;
-  width: 40px;
+  width: 50px;
 }
 
-header h1,
-.bell-icon,
-header div,
-.my-profile-pic,
-header h3 {
-  display: inline;
+nav {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 60px));
+  grid-gap: 5px;
 }
 
 nav a img {

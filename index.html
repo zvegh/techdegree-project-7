@@ -32,7 +32,7 @@
         <div class="main-header">
             <h2 class="headline">Dashboard</h2>
             <div class="main-header-search">
-                <input type="search" placeholder="Search...">
+                <input id="main-search" type="search" placeholder="Search...">
             </div>
         </div>
         <!-- alert banner-->
@@ -62,35 +62,50 @@
                <canvas id="daily-chart"></canvas>
            </div>
        </section>
-       <div class="social-container">
-           <div class="social-image">
-               <!-- inline svg not included for brevity -->
-               
-           </div>
-           <div class="social-text">
-               <p>Twitter</p>
-               <p>10,345</p>
-           </div>
-       </div>
-       <!-- add two more social containers and child elements for other social media items -->
-       <div class="social-container">
-        <div class="social-image">
-            <!-- inline svg not included for brevity -->
+
+       <section class="mobile">
+        <h3>Mobile Users</h3>
+        <div class="widget-container-half">
+            <!-- element bar graph will attach to -->
+            <canvas id="mobile-chart"></canvas>
         </div>
-        <div class="social-text">
-            <p>Facebook</p>
-            <p>8,739</p>
+    </section>
+
+
+       <div class="social-container-grid">
+        <div class="social-container">
+            <div class="social-image">
+                <!-- inline svg not included for brevity -->
+                <img src="icons/icon-twitter.svg" alt="twitter icon">
+                
+            </div>
+            <div class="social-text">
+                <p>Twitter</p>
+                <p>10,345</p>
+            </div>
         </div>
-    </div>
-    <div class="social-container">
-        <div class="social-image">
-            <!-- inline svg not included for brevity -->
+        <!-- add two more social containers and child elements for other social media items -->
+        <div class="social-container">
+            <div class="social-image">
+                <!-- inline svg not included for brevity -->
+                <img src="icons/icon-facebook.svg" alt="facebook icon">
+            </div>
+            <div class="social-text">
+                <p>Facebook</p>
+                <p>8,739</p>
+            </div>
         </div>
-        <div class="social-text">
-            <p>Google+</p>
-            <p>2,530</p>
+        <div class="social-container">
+            <div class="social-image">
+                <!-- inline svg not included for brevity -->
+                <img src="icons/icon-google-plus.svg" alt="google plus icon">
+            </div>
+            <div class="social-text">
+                <p>Google+</p>
+                <p>2,530</p>
+            </div>
         </div>
-    </div>
+</div>
     <!-- new members widget -->
     <section class="members">
         <h3>New Members</h3>
@@ -102,8 +117,89 @@
                     <a href="#">victoria.chambers80@example.com</a>
                 </div>
                 <p>10/15/15</p>
+                <hr class="members-line-break">
+            </div>
+
+            <div class="members-container">
+                <img src="images/member-2.jpg" class="profile-image" alt="a profile image">
+                <div class="members-text">
+                    <p>Dale Byrd</p>
+                    <a href="#">dale.byrd52@example.com</a>
+                </div>
+                <p>10/15/15</p>
+                <hr class="members-line-break">
+            </div>
+
+            <div class="members-container">
+                <img src="images/member-3.jpg" class="profile-image" alt="a profile image">
+                <div class="members-text">
+                    <p>Dawn Wood</p>
+                    <a href="#">dawn.wood16@example.com</a>
+                </div>
+                <p>10/15/15</p>
+                <hr class="members-line-break">
+            </div>
+
+            <div class="members-container">
+                <img src="images/member-4.jpg" class="profile-image" alt="a profile image">
+                <div class="members-text">
+                    <p>Dan Oliver</p>
+                    <a href="#">dan.oliver82@example.com</a>
+                </div>
+                <p>10/15/15</p>
             </div>
     </section>
+
+    <section class="members">
+        <h3>Recent Activity</h3>
+
+            <div class="members-container">
+                <img src="images/member-1.jpg" class="profile-image" alt="a profile image">
+                <div class="members-text">
+                    <p>Victoria Chambers commented on YourApp's SEO Tips</p>
+                    <p>4 hours ago</p>>
+                </div>
+                <p>10/15/15</p>
+                <p>></p>
+                <hr class="members-line-break">
+            </div>
+
+            <div class="members-container">
+                <img src="images/member-2.jpg" class="profile-image" alt="a profile image">
+                <div class="members-text">
+                    <p>Dale Byrd likes the post Facebook's Changes for 2016</p>
+                    <p>5 hours ago</p>>
+                </div>
+                <p>10/15/15</p>
+                <p>></p>
+                <hr class="members-line-break">
+            </div>
+
+            <div class="members-container">
+                <img src="images/member-3.jpg" class="profile-image" alt="a profile image">
+                <div class="members-text">
+                    <p>Dawn Wood commented on Facebook's Changes for 2016</p>
+                    <p>5 hours ago</p>>
+                </div>
+                <p>10/15/15</p>
+                <p>></p>
+                <hr class="members-line-break">
+            </div>
+
+            <div class="members-container">
+                <img src="images/member-4.jpg" class="profile-image" alt="a profile image">
+                <div class="members-text">
+                    <p>Dan Oliver posted YourApp's SEO Tips</p>
+                    <p>1 day ago</p>>
+                </div>
+                <p>10/15/15</p>
+                <p>></p>
+                <hr class="members-line-break">
+            </div>
+
+    </section>
+
+
     <!-- messaging widget -->
     <section class="message">
         <h3>Message User</h3>
@@ -117,10 +213,25 @@
     <!-- local settings widget -->
     <section class="settings">
         <h3>Settings</h3>
-
+        <div class="switch-wrapper">
          <!-- custom css toggle code -->
+            <!-- Rounded switch -->
+            <p>Send Email Notifications</p>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
 
-          <!-- custom css toggle code -->
+          
+          <div class="switch-wrapper">
+              <!-- custom css toggle code -->
+                <p>Set Profile Public</p>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+            </div>
 
           <select class="form-field" id="timezone">
               <option disabled selected>Select a Timezone</option>

@@ -1,3 +1,7 @@
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   height: 100%;
@@ -47,6 +51,40 @@ main {
   grid-area: main;
 }
 
+.main-header-search {
+  display: grid;
+  justify-content: center;
+  width: 100%;
+}
+
+#main-search {
+  background-color: rgb(251, 251, 251);
+  border-radius: 10%;
+  width: 100%;
+  height: 50px;
+  border: 1px solid rgb(209, 209, 209);
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.alert {
+  background-color: rgb(115, 119, 191);
+  padding: 20px 40px;
+  width: 80%;
+  margin: auto;
+  border-radius: 10%;
+}
+
+.alert-banner-p {
+  display: inline;
+}
+
+.alert-banner-close {
+  display: inline;
+  float: right;
+  margin: 0;
+}
+
 .traffic-header h3 {
   display: inline;
   float: left;
@@ -86,6 +124,178 @@ nav {
 nav a img {
   height: 60px;
   margin: 10px auto;
+}
+
+.social-container-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.social-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border: 1px solid black;
+  background-color: rgb(251, 251, 251);
+  border-radius: 10%;
+}
+
+.social-image img {
+  height: 50px;
+}
+
+.message {
+  display: grid;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.message h3 {
+  color: rgb(145, 145, 145);
+}
+
+#userField {
+  background-color: rgb(251, 251, 251);
+  border-radius: 10%;
+  width: 70%;
+  border: 1px solid rgb(209, 209, 209);
+  margin-bottom: 20px;
+}
+
+#messageField {
+  background-color: rgb(251, 251, 251);
+  border-radius: 10%;
+  width: 70%;
+  border: 1px solid rgb(209, 209, 209);
+  height: 120px;
+}
+
+.button-primary {
+  background-color: rgb(115, 119, 191);
+  color: white;
+  display: block;
+  box-shadow: none;
+  border-style: none;
+  text-transform: uppercase;
+}
+
+#send {
+  width: 70%;
+  height: 50px;
+  border-radius: 5%;
+}
+
+#timezone {
+  width: 80%;
+  background-color: rgb(251, 251, 251);
+  color: rgb(188, 188, 188);
+  height: 50px;
+  border-radius: 5%;
+}
+
+#save {
+  background-color: rgb(115, 119, 191);
+  color: white;
+  display: block;
+  box-shadow: none;
+  border-style: none;
+  text-transform: uppercase;
+  width: 40%;
+  height: 50px;
+  display: inline;
+}
+
+.button-disabled {
+  background-color: rgb(178, 178, 178);
+  width: 40%;
+  height: 50px;
+  border-radius: 5%;
+  box-shadow: none;
+  border-style: none;
+  text-transform: uppercase;
+}
+
+.switch-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.switch-wrapper p {
+  display: inline;
+}
+
+/* 
+  Slider taken from https://www.w3schools.com/howto/howto_css_switch.asp
+*/
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.settings-button {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  justify-items: stretch;
 }
 
 @media (min-width: 768px) {

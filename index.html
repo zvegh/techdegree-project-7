@@ -3,248 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/normalize.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
-    <title>WebApp Dashboard</title>
+    <title>YourApp</title>
 </head>
-<body class="grid-container">
-
+<body>
     <header>
-        <h1 class="your-app"><span>Your</span><span>App</span></h1>
-        
-        <div class="noti-div">
-            <img class="bell-icon" src="icons/icon-bell.svg" alt="bell icon">
-            <div class="notifications"></div>
-        </div>
-        <img class="my-profile-pic" src="images/profile-me.jpg" alt="a photo of me">
-        <h3>Zoltan Vegh</h3>
+        <div class="header-container">
+            <h1>YourApp<sup>TM</sup></h1>
+            <div class="bell-container">
+                <a class="account-notify"><img id="myBtn" class="bell-icon" src="icons/icon-bell.svg" alt="bell icon"></a>
+                <div class="notification">
+                    <!-- container element for our notifications -->
+
+                     <!-- The modal -->
+                     <div id="myModal" class="modal">
+                          <!-- Modal content -->
+                          <div class="modal-content">
+                              <span class="close">&times;</span>
+                              <strong>Info!</strong> Indicates a neutral informative change or action.
+                          </div>
+                          <div class="modal-content">
+                              <span class="close">&times;</span>
+                              <strong>Warning!</strong> Indicates a warning that might need attention.
+                          </div>
+                     </div>
+                </div>
+            </div>
+            <div class="member-image">
+                <img src="images/profile-me.jpg" alt=" a photo of zoltan" class="zoltan-profile-image">
+                <h3>Zoltan Vegh</h3>
+            </div>
+        </div> <!-- header container -->
     </header>
     <nav>
-        <a><img class="dashboard-svg" src="icons/icon-dashboard.svg" alt="dashboard icon"></a>
-        <a><img class="members-svg" src="icons/icon-members.svg" alt=" members icon"></a>
-        <a><img class="visits-svg" src="icons/icon-visits.svg" alt="visits icon"></a>
-        <a><img class="settings-svg" src="icons/icon-settings.svg" alt="settings icon"></a>
+        <div class="navigation-container">
+            <ul class="icons">
+                <li><a><img src="icons/icon-dashboard.svg" alt="Image of a calculator" class="calculator"></a></li>
+                <li><a><img src="icons/icon-members.svg" alt="Image of a member" class="person"></a></li>
+                <li><a><img src="icons/icon-visits.svg" alt="Image of a graph" class="graph"></a></li>
+                <li><a><img src="icons/icon-settings.svg" alt="Image of sliders" class="sliders"></a></li>
+            </ul>
+        </div>
     </nav>
     <main>
         <div class="main-header">
             <h2 class="headline">Dashboard</h2>
             <div class="main-header-search">
-                <input id="main-search" type="search" placeholder="Search...">
+                <input type="search" class="form-field1" placeholder="Search...">
             </div>
         </div>
+
         <!-- alert banner-->
         <div class="alert" id="alert">
-            <!-- JS will insert here -->
-        </div>
-       <section class="traffic">
-           <div class="traffic-header">
-               <h3>Traffic</h3>
-               <ul class="traffic-nav">
-                   <li class="traffic-nav-link">Hourly</li>
-                   <li class="traffic-nav-link">Daily</li>
-                   <li class="traffic-nav-link active">Weekly</li>
-                   <li class="traffic-nav-link">Monthly</li>
-               </ul>
-           </div>
-           <div class="widget-container-full">
-               <!-- element line graph will attach to -->
-               <canvas id="traffic-chart"></canvas>
-           </div>
-       </section>
-       <!-- bar graph -->
-       <section class="daily">
-           <h3>Daily Traffic</h3>
-           <div class="widget-container-half">
-               <!-- element bar graph will attach to -->
-               <canvas id="daily-chart"></canvas>
-           </div>
-       </section>
-
-       <section class="mobile">
-        <h3>Mobile Users</h3>
-        <div class="widget-container-half">
-            <!-- element bar graph will attach to -->
-            <canvas id="mobile-chart"></canvas>
-        </div>
-    </section>
-
-
-       <div class="social-container-grid">
-        <div class="social-container">
-            <div class="social-image">
-                <!-- inline svg not included for brevity -->
-                <img src="icons/icon-twitter.svg" alt="twitter icon">
-                
-            </div>
-            <div class="social-text">
-                <p>Twitter</p>
-                <p>10,345</p>
-            </div>
-        </div>
-        <!-- add two more social containers and child elements for other social media items -->
-        <div class="social-container">
-            <div class="social-image">
-                <!-- inline svg not included for brevity -->
-                <img src="icons/icon-facebook.svg" alt="facebook icon">
-            </div>
-            <div class="social-text">
-                <p>Facebook</p>
-                <p>8,739</p>
-            </div>
-        </div>
-        <div class="social-container">
-            <div class="social-image">
-                <!-- inline svg not included for brevity -->
-                <img src="icons/icon-google-plus.svg" alt="google plus icon">
-            </div>
-            <div class="social-text">
-                <p>Google+</p>
-                <p>2,530</p>
-            </div>
-        </div>
-</div>
-    <!-- new members widget -->
-    <section class="members">
-        <h3>New Members</h3>
-
-        <div class="members-container">
-            <img src="images/member-1.jpg" class="profile-image" alt="a profile image">
-            <div class="members-text">
-                <p class="member-name">Victoria Chambers</p>
-                <a href="#">victoria.chambers80@example.com</a>
-            </div>
-            <p class="date">10/15/15</p>
-            <hr class="members-line-break">
+            <!-- JS will insert alert here-->
         </div>
 
-            <div class="members-container">
-                <img src="images/member-2.jpg" class="profile-image" alt="a profile image">
-                <div class="members-text">
-                    <p class="member-name">Dale Byrd</p>
-                    <a href="#">dale.byrd52@example.com</a>
-                </div>
-                <p class="date">10/15/15</p>
-                <hr class="members-line-break">
+        <!-- line graph charts -->
+        <section class="traffic">
+            <div class="traffic-header">
+                <h3 class="traffic-line-graph-header">Traffic</h3>
+                <ul class="traffic-nav">
+                    <li class="traffic-nav-link"><a id="btn1">Hourly</a></li>
+                    <li class="traffic-nav-link"><a id="btn2">Daily</a></li>
+                    <li class="traffic-nav-link active"><a id="btn3">Weekly</a></li>
+                    <li class="traffic-nav-link"><a id="btn4">Mothly</a></li>
+                </ul>
             </div>
-
-            <div class="members-container">
-                <img src="images/member-3.jpg" class="profile-image" alt="a profile image">
-                <div class="members-text">
-                    <p class="member-name">Dawn Wood</p>
-                    <a href="#">dawn.wood16@example.com</a>
-                </div>
-                <p class="date">10/15/15</p>
-                <hr class="members-line-break">
+            <div class="widget-container-full">
+                <!-- element line graph will attach to -->
+                <canvas id="traffic-chart" width="300" height: "200"></canvas>
             </div>
+        </section>
 
-            <div class="members-container">
-                <img src="images/member-4.jpg" class="profile-image" alt="a profile image">
-                <div class="members-text">
-                    <p class="member-name">Dan Oliver</p>
-                    <a href="#">dan.oliver82@example.com</a>
-                </div>
-                <p class="date">10/15/15</p>
+        <!-- bar graph -->
+        <section class="daily">
+            <h3 class="daily-traffic-header">Daily Traffic</h3>
+            <div class="widget-container-half">
+                <!-- element bar graph will attach to -->
+                <canvas id="daily-chart"></canvas>
             </div>
-    </section>
+        </section>
 
-    <section class="members">
-        <h3>Recent Activity</h3>
-
-            <div class="members-container">
-                <img src="images/member-1.jpg" class="profile-image" alt="a profile image">
-                <div class="members-text">
-                    <p>Victoria Chambers commented on YourApp's SEO Tips</p>
-                    <p>4 hours ago</p>>
-                </div>
-                <p>10/15/15</p>
-                <p>></p>
-                <hr class="members-line-break">
+        <!-- Doughnut chart -->
+        <section class="mobile">
+            <h3 class="mobile-header">Mobile Users</h3>
+            <div class="widget-container-half">
+                <!-- element bar graph will attach to-->
+                <canvas id="mobile-chart"></canvas>
             </div>
+        </section>
 
-            <div class="members-container">
-                <img src="images/member-2.jpg" class="profile-image" alt="a profile image">
-                <div class="members-text">
-                    <p>Dale Byrd likes the post Facebook's Changes for 2016</p>
-                    <p>5 hours ago</p>>
-                </div>
-                <p>10/15/15</p>
-                <p>></p>
-                <hr class="members-line-break">
-            </div>
-
-            <div class="members-container">
-                <img src="images/member-3.jpg" class="profile-image" alt="a profile image">
-                <div class="members-text">
-                    <p>Dawn Wood commented on Facebook's Changes for 2016</p>
-                    <p>5 hours ago</p>>
-                </div>
-                <p>10/15/15</p>
-                <p>></p>
-                <hr class="members-line-break">
-            </div>
-
-            <div class="members-container">
-                <img src="images/member-4.jpg" class="profile-image" alt="a profile image">
-                <div class="members-text">
-                    <p>Dan Oliver posted YourApp's SEO Tips</p>
-                    <p>1 day ago</p>>
-                </div>
-                <p>10/15/15</p>
-                <p>></p>
-                <hr class="members-line-break">
-            </div>
-
-    </section>
-
-
-    <!-- messaging widget -->
-    <section class="message">
-        <h3>Message User</h3>
-
-        <form class="widget-container">
-            <input type="text" placeholder="Search for user" class="form-field" id="userField">
-            <textarea placeholder="Message for user" class="form-area" id="messageField"></textarea>
-            <button class="button-primary" id="send">Send</button>
-        </form>
-    </section>
-    <!-- local settings widget -->
-    <section class="settings">
-        <h3>Settings</h3>
-        <div class="switch-wrapper">
-         <!-- custom css toggle code -->
-            <!-- Rounded switch -->
-            <p>Send Email Notifications</p>
-            <label class="switch">
-                <input type="checkbox">
-                <span class="slider round"></span>
-            </label>
-        </div>
-
-          
-          <div class="switch-wrapper">
-              <!-- custom css toggle code -->
-                <p>Set Profile Public</p>
-            <label class="switch">
-                <input type="checkbox">
-                <span class="slider round"></span>
-            </label>
-            </div>
-
-          <select class="form-field" id="timezone">
-              <option disabled selected>Select a Timezone</option>
-              <option>Eastern</option>
-              <!-- more options -->
-          </select>
-          <div class="settings-button">
-              <button class="button-primary" id="save">Save</button>
-              <button class="button-disabled" id="cancel">Cancel</button>
-          </div>
-    </section>
     </main>
-    <script src="js/app.js"></script>
 </body>
-
 </html>

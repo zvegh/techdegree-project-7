@@ -223,3 +223,163 @@ input.form-field1 {
   padding-left: 10px;
   padding-right: 5px;
 }
+
+/*
+  Traffic
+*/
+
+.traffic-nav {
+  text-decoration: none;
+  list-style: none;
+  display: inline-block;
+  font-size: 12px;
+  margin-left: 16px;
+  line-height: 22px;
+  cursor: pointer;
+}
+
+.traffic-nav li:hover {
+  color: white;
+  background-color: #83c891;
+  border-radius: 2em;
+  font-weight: bold;
+  padding: 0 0.5em;
+  height: 20px;
+  line-height: 20px;
+}
+
+.traffic-line-graph-header {
+  font-weight: bold;
+  text-transform: uppercase;
+  float: left;
+  display: inline-block;
+  line-height: 1;
+  font-size: 1em;
+  margin-left: 20px;
+}
+
+ul li {
+  list-style: none;
+  margin-right: 8px;
+  margin-left: 0;
+  float: right;
+}
+
+traffic {
+  margin-top: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.widget-container-full {
+  margin-left: 8px;
+  margin-bottom: 30px;
+}
+
+/*
+  Daily Traffic
+*/
+
+.daily-traffic-header {
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-left: 20px;
+  font-size: 1em;
+}
+
+.daily {
+  border-bottom: 1px solid #ccc;
+  padding-top: 20px;
+}
+
+.widget-container-half {
+  margin-bottom: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/*
+  Mobile Users
+*/
+
+.mobile-header {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: 20px;
+  font-size: 1em;
+}
+
+.mobile {
+  border-bottom: 1px solid #ccc;
+  margin-top: 20px;
+}
+
+/*
+  Social Stats
+*/
+
+.social {
+  border-bottom: 1px solid #ccc;
+  margin-top: 20px;
+}
+
+.social-header {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: 20px;
+  font-size: 1em;
+}
+
+.social-containers {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  margin-bottom: 20px;
+}
+
+.social-image {
+  background-color: #fbfbfb;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 2em;
+  width: 300px;
+  height: 150px;
+}
+
+.social svg {
+  background-color: #7578bf;
+  border-radius: 200%;
+  display: inline-block;
+  fill: white;
+  float: left;
+  height: 90px;
+  margin-right: 20px;
+  margin-bottom: 50px;
+  vertical-align: text-top;
+  width: 90px;
+}
+
+.social-heading {
+  color: #7379bd;
+  display: block;
+  font-size: 125%;
+  margin: 0;
+}
+
+.social-stats {
+  color: #7b7b7d;
+  font-size: 300%;
+  margin-bottom: 10px;
+}
+
+.facebook-svg {
+  padding-bottom: 20px;
+}
+
+.google-svg {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}

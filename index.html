@@ -199,10 +199,91 @@
             <div class="members-container">
                 <img src="images/member-1.jpg" alt="an image of a member" class="profile-image">
                 <div class="members-text">
-                    <p class="activity-comment">Victoria Chambers commented<br>on YourApp's SEO Tips </p>
+                    <p class="activity-comment">Victoria Chambers commented<br>on YourApp's SEO Tips</p>
                     <p class="time">4 hours ago</p>
                     <i class="arrow-right"></i>
                 </div>
+            </div>
+
+            <div class="members-container">
+                <img src="images/member-2.jpg" alt="an image of a member" class="profile-image">
+                <div class="members-text">
+                    <p class="activity-comment">Dale Byrd likes the post Facebook's Changes<br>for 2016</p>
+                    <p class="time">5 hours ago</p>
+                    <i class="arrow-right"></i>
+                </div>
+            </div>
+
+            <div class="members-container">
+                <img src="images/member-3.jpg" alt="an image of a member" class="profile-image">
+                <div class="members-text">
+                    <p class="activity-comment">Dawn Wood commented on Facebook's Canges for 2016</p>
+                    <p class="time">5 hours ago</p>
+                    <i class="arrow-right"></i>
+                </div>
+            </div>
+
+            <div class="members-container">
+                <img src="images/member-4.jpg" alt="an image of a member" class="profile-image">
+                <div class="members-text">
+                    <p class="activity-comment">Dan Oliver posted YourApp's<br>SEO Tips</p>
+                    <p class="time">1 day ago</p>
+                    <i class="arrow-right"></i>
+                </div>
+            </div>
+        </section> <!-- activity -->
+
+        <section class="message">
+            <h3 class="message-header">Message User</h3>
+            <form action="index.html" class="widget-container">
+                <div class="autocomplete">
+                    <input type="text" id="myInput" placeholder="Search for user" name="names" class="form-field"> 
+                </div>
+                <textarea placeholder="Message for user" class="form-area" id="messageField"></textarea>
+                <button class="button-user" id="send">Send</button>
+            </form>
+        </section> <!-- message -->
+
+        <section class="setting">
+            <h3 class="settings-header">Settings</h3>
+
+            <div class="send-email">
+                <strong class="email">Send email<br>notifications</strong>
+
+                <div class="onOffSwitch">
+                    <input type="checkbox" name="onOffSwitch" class="onOffSwitch-checkbox" id="myOnOffSwitch" tabindex="0" checked>
+                    <label class="onOffSwitch-label" for="myOnOffSwitch">
+                        <span class="onOffSwitch-inner"></span>
+                        <span class="onOffSwitch-switch"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="profile-public">
+                <strong class="public">Set profile to public</strong>
+                <div class="onOffSwitch">
+                    <input class="onOffSwitch-checkbox" type="checkbox" name="onOffSwitch" id="myOnOffSwitch1" tabindex="0" checked>
+                    <label class="onOffSwitch-label" for="myOnOffSwitch1">
+                        <span class="onOffSwitch-inner"></span>
+                        <span class="onOffSwitch-switch"></span>
+                    </label>
+                </div>
+            </div>
+
+            <select id="timezone" class="form-field2">
+                <option disabled selected>Select a Timezone</option>
+                
+                <option>Central</option>
+                <option>Eastern</option>
+                <option>Mountain</option>
+                <option>Pacific</option>
+                
+                
+            </select>
+
+            <div class="settings-button">
+                <button class="button-settings" id="save">Save</button>
+                <button class="button-disabled" id="cancel">Cancel</button>
             </div>
         </section>
 

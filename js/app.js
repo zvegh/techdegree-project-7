@@ -188,6 +188,7 @@ var modal = document.getElementById('myModal');
 var btn = document.getElementById('myBtn');
 
 // button that closes the modal
+var span = document.getElementsByClassName('close')[0];
 
 // when the user clicks the button, the modal opens
 btn.addEventListener('click', event => {

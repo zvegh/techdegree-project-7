@@ -383,3 +383,218 @@ traffic {
   padding-top: 25px;
   padding-bottom: 25px;
 }
+
+/*
+  New Members
+*/
+
+.new-members-header {
+  font-weight: 700;
+  text-transform: uppercase;
+  display: block;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-size: 1em;
+}
+
+.members {
+  display: block;
+  border-bottom: 1px solid #ccc;
+}
+
+.members-container {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ccc;
+}
+
+.members-container:last-child {
+  border-bottom: 0;
+}
+
+.date {
+  float: right;
+  font-size: 10px;
+}
+
+.members-text {
+  margin-bottom: 40px;
+  margin-right: 20px;
+}
+
+.profile-image {
+  display: inline-block;
+  fill: white;
+  float: left;
+  height: 50px;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 50px;
+  vertical-align: text-top;
+  border-radius: 50%;
+  width: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: #7578bf;
+}
+
+p {
+  margin-bottom: 5px;
+}
+
+.members-container a {
+  display: flex;
+  font-size: 10px;
+}
+
+/*
+  Recent Activity
+*/
+
+.activity {
+  border-bottom: 1px solid #ccc;
+}
+
+.time {
+  color: #7578bf;
+  font-size: 10px;
+}
+
+.arrow-right {
+  border: solid #4d4f73;
+  border-width: 0 3px 3px 0;
+  padding-right: 5px;
+  display: inline-block;
+  padding: 10px;
+  float: right;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.members-container .arrow-right {
+  margin-right: 20px;
+}
+
+/*
+  Message User
+*/
+
+.message-header {
+  margin-left: 10px;
+}
+
+.mobile-header {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1em;
+  margin-left: 10px;
+}
+
+.form-field,
+.form-area {
+  background-color: #eee;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-left: 10px;
+  display: block;
+  margin: 1em 0;
+  padding: 1em;
+  width: 93%;
+  margin-left: 10px;
+}
+
+.form-area {
+  height: 150px;
+}
+
+.message {
+  margin-bottom: 20px;
+  padding-top: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.button-user {
+  background-color: #7379bd;
+  border-radius: 5px;
+  border: 0;
+  color: #fff;
+  margin: 0;
+  padding: 1em 2em;
+  text-transform: uppercase;
+  width: 93%;
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+
+/*
+  Settings
+*/
+
+.settings {
+  margin-bottom: 20px;
+  font-size: 1em;
+}
+
+.form-field2 {
+  background-color: #eee;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  display: block;
+  margin: 1em 0;
+  padding: 1em;
+  width: 95%;
+}
+
+.settings-header,
+.form.field2,
+.settings-button {
+  margin-left: 10px;
+}
+
+.button-settings,
+.button-disabled {
+  width: 48%;
+}
+
+.button-settings {
+  background-color: #7379bd;
+  border-radius: 5px;
+  border: 0;
+  color: #fff;
+  margin: 0;
+  padding: 1em 2em;
+  text-transform: uppercase;
+}
+
+.button-disabled {
+  background-color: #b2b2b2;
+  border-radius: 5px;
+  border: 0;
+  color: #fff;
+  margin: 0;
+  padding: 1em 2em;
+  text-transform: uppercase;
+}
+
+.send-email,
+.profile-public {
+  display: block;
+  margin-left: 10px;
+}
+
+.send-email {
+  margin-bottom: 40px;
+}
+
+.email,
+.public {
+  font-size: 16px;
+}
+
+.switch {
+  float: right;
+  margin-bottom: 20px;
+  margin-right: 60px;
+}

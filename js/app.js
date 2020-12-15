@@ -93,6 +93,8 @@ let trafficChart = new Chart(trafficCanvas, {
 
 // Bar Graph
 
+const dailyCanvas = document.getElementById('daily-chart');
+
 const dailyData = {
     labels: [
         'S', 'M', 'T', 'W', 'T', 'F', 'S'
@@ -160,4 +162,20 @@ let mobileChart = new Chart(mobileCanvas, {
 });
 
 // Messaging
+
+const user = document.querySelector('#myInput');
+const message = document.querySelector('#messageField');
+const send = document.querySelector('#send');
+
+send.addEventListener('click', () => {
+    if (user.value === '' && message.value === '') {
+        alert('Please fill out user and message fields before sending');
+    } else if (user.value === '') {
+        alert('Please fill out user field before sending');
+    } else if (message.value === '') {
+        alert('Please fill out message field before sending');
+    } else {
+        alert(`Message successfully sent to: ${user.value}`);
+    }
+});
 

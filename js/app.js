@@ -179,3 +179,46 @@ send.addEventListener('click', () => {
     }
 });
 
+// Noti
+
+// get the modal
+var modal = document.getElementById('myModal');
+
+// button that opens the modal
+var btn = document.getElementById('myBtn');
+
+// button that closes the modal
+
+// when the user clicks the button, the modal opens
+btn.addEventListener('click', event => {
+    modal.style.display = 'block';
+    event.preventDefault();
+});
+
+// when the user clicks the span the modal closes
+span.onclick = function() {
+    modal.style.display = 'none';
+};
+
+var close = document.getElementsByClassName('close');
+var i;
+
+for(i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+        var div = this.parentElement;
+        div.style.opacity = '0';
+        setTimeout(function(){ div.style.display = 'none'; }, 600);
+    };
+};
+
+span.onclick = function() {
+    modal.style.display = 'none';
+};
+
+// when user clicks anywhere outside of the modal, it closes
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
+};
+

@@ -598,3 +598,295 @@ p {
   margin-bottom: 20px;
   margin-right: 60px;
 }
+
+/*
+  Toggle switches
+*/
+
+.onOffSwitch {
+  position: relative;
+  width: 116px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.onOffSwitch-checkbox {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.onOffSwitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid #999;
+  border-radius: 21px;
+}
+
+.onOffSwitch-inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+}
+
+.onOffSwitch-inner:before,
+.onOffSwitch-inner:after {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 28px;
+  padding: 0;
+  line-height: 28px;
+  font-size: 19px;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+.onOffSwitch-inner:before {
+  content: "ON";
+  padding-left: 10px;
+  background-color: #7578bf;
+  color: white;
+}
+
+.onOffSwitch:after {
+  content: "OFF";
+  padding-right: 10px;
+  background-color: #7578bf;
+  color: white;
+  text-align: right;
+}
+
+.onOffSwitch-switch {
+  display: block;
+  width: 16px;
+  margin: 6px;
+  background: #fcf7f7;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 84px;
+  border: 2px solid #999;
+  border-radius: 21px;
+  transition: all 0.3s ease-in 0s;
+}
+
+.onOffSwitch-checkbox:checked + .onOffSwitch-label .onOffSwitch-inner {
+  margin-left: 0;
+}
+
+.onOffSwitch-checkbox:checked + .onOffSwitch-label .onOffSwitch-switch {
+  right: 0px;
+}
+
+.onOffSwitch {
+  float: right;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+/*
+  Grid
+*/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main";
+}
+
+header {
+  grid-area: header;
+}
+
+nav {
+  grid-area: nav;
+  background: blue;
+}
+
+main {
+  grid-area: main;
+  /* background: green; */
+}
+
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: 55px 1fr;
+    grid-template-areas:
+      "header header"
+      "nav main";
+  }
+
+  .main-header-search {
+    margin-right: 0;
+  }
+
+  .form-field1 {
+    float: right;
+    width: 60%;
+  }
+
+  .socialcontainers {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .traffic-nav {
+    padding-right: 20px;
+    float: right;
+  }
+
+  #traffic-chart {
+    margin-left: 20px;
+  }
+
+  .daily {
+    border-right: 1px solid #ccc;
+  }
+
+  .members {
+    border-right: 1px solid #ccc;
+  }
+
+  .members .members-container:nth-child(2) {
+    padding-bottom: 19px;
+  }
+
+  .members .members-container:nth-child(3) {
+    padding-bottom: 38px;
+  }
+
+  .members .members-container:nth-child(4) {
+    padding-bottom: 19px;
+  }
+
+  .message {
+    border-right: 1px solid #ccc;
+    border-bottom: 0;
+  }
+
+  .widget-container {
+    border-bottom: 0;
+  }
+
+  .message-header,
+  .widget-container {
+    margin-left: 20px;
+  }
+
+  .form-field,
+  .form-area,
+  .button-user {
+    margin-left: 0;
+  }
+
+  #myInput {
+    width: 93%;
+  }
+
+  .settings {
+    padding-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 0;
+  }
+
+  .form-field2,
+  .button-settings,
+  .button-disabled {
+    margin-left: 0;
+  }
+
+  .button-settings,
+  .button-disabled {
+    width: 47%;
+  }
+
+  .settings-header,
+  .form-field2,
+  .settings-button {
+    margin-left: 0;
+  }
+
+  .send-email,
+  .profile-public {
+    margin-left: 0;
+  }
+}
+
+main {
+  display: grid;
+}
+
+@media (min-width: 768px) {
+  main {
+    grid-template-columns: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .traffic,
+  .main-header,
+  .alert,
+  .social {
+    grid-column: 1 / span 2;
+  }
+}
+
+@media (min-width: 768px) {
+  .daily,
+  .members,
+  .message {
+    grid-column: 1 / span 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile,
+  .activity,
+  .settings {
+    grid-column: 2 / span 1;
+  }
+}
+
+.widget-container-full,
+.widget-container-half {
+  width: 95vw;
+}
+
+@media (min-width: 768px) {
+  .widget-container-full {
+    width: 90vw;
+  }
+  .widget-container-half {
+    width: 45vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  .form-field1 {
+    width: 40%;
+  }
+
+  .activity .members-container:nth-child(3) {
+    padding-bottom: 19px;
+  }
+
+  .activity .members-container:nth-child(4) {
+    padding-bottom: 19px;
+  }
+
+  #myInput {
+    width: 93%;
+  }
+}

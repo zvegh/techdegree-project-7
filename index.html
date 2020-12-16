@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css" />
   <title>YourApp</title>
 </head>
 
@@ -21,18 +20,18 @@
         <img id="myBtn" class="bell-icon" src="icons/icon-bell.svg" alt="bell icon">
         </a>
         <div class="notifications">
-          <!-- container element for our notifications -->
+          <!-- container element for notis -->
 
           <!-- The Modal -->
           <div id="myModal" class="modal">
 
           <!-- Modal content -->
           <div class="modal-content" id="modal-content-1">
-            <span class="close">X</span>
+            <span class="close" id="close-1">X</span>
             <strong>Info!</strong> Indicates a neutral informative change or action.
           </div>
           <div class="modal-content" id="modal-content-2">
-            <span class="close">X</span>
+            <span class="close" id="close-2">X</span>
             <strong>Warning!</strong> Indicates a warning that might need attention.
           </div>
 
@@ -42,7 +41,7 @@
       </div>
       
       <div class="member-image">
-      <img src="images/profile-me.jpg" alt="image of me" class="zoltan-profile-image">
+      <img src="images/profile-me.jpg" alt="image of me" class="me-profile-image">
       <h3>Zoltan Vegh</h3>
       </div>
     </div><!-- header-container -->
@@ -89,7 +88,7 @@
       </ul>
       </div>
       <div class="widget-container-full">
-      <!-- element line graph will attach to -->
+
       <canvas id="traffic-chart" width="300" height="200"></canvas>
     </div>
     </section>
@@ -98,7 +97,7 @@
     <section class="daily">
       <h3 class="daily-traffic-header">Daily Traffic</h3>
       <div class="widget-container-half">
-      <!-- element bar graph will attach to -->
+
       <canvas id="daily-chart"></canvas>
       </div>
     </section>
@@ -107,7 +106,7 @@
     <section class="mobile">
       <h3 class="mobile-header">Mobile Users</h3>
       <div class="widget-container-half">
-      <!-- element bar graph will attach to -->
+
       <canvas id="mobile-chart"></canvas>
       </div>
     </section>
@@ -170,8 +169,6 @@
       </div><!-- social-image -->
       </div>
       </div><!-- social-container -->
-
-      <!-- new members widget -->
 
       
       <section class="members">
@@ -271,12 +268,10 @@
           </form>
         </section> <!-- message -->
 
-        <!-- local settings widget -->
         
         <section class="settings">
         <h3 class="settings-header">Settings</h3>
 
-        <!-- custom CSS toggle code-->
          
         <div class="send-email">
         <strong class="email">
@@ -306,15 +301,15 @@
            </div>
         </div>
 
-        <!-- custom CSS toggle code-->
 
         <select class="form-field2" id="timezone">
+
         <option disabled selected>Select a Timezone</option>
         <option>Pacific</option>
         <option>Mountain</option>
         <option>Central</option>
         <option>Eastern</option>
-        <!-- more options -->
+      
         </select>
         <div class="settings-button" >
         <button class="button-settings" id="save">Save</button>

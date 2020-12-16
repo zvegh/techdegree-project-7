@@ -11,7 +11,7 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  color: #aaa;
+  color: rgb(111, 111, 111);
 }
 
 main {
@@ -31,7 +31,7 @@ Header
 .header-container {
   font-family: "Montserrat", sans-serif;
   color: white;
-  background-color: #7578bf;
+  background-color: rgb(116, 119, 191);
   padding: 0 15px;
   height: 100%;
   width: 100%;
@@ -55,7 +55,7 @@ h1 {
   margin-left: 5px;
 }
 
-.zoltan-profile-image {
+.me-profile-image {
   width: 35px;
   border-radius: 50%;
   margin-right: 10px;
@@ -97,23 +97,22 @@ body {
 
 /* The Modal (background) */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
   color: white;
 }
 
 /* Modal Content */
 .modal-content {
-  background-color: #7578bf;
+  background-color: rgb(116, 119, 191);
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
@@ -140,7 +139,7 @@ Alert
 */
 
 .alert {
-  background-color: #7379bd;
+  background-color: rgb(116, 119, 191);
   border-radius: 5px;
   color: white;
   margin: 1em 1em 0;
@@ -169,7 +168,7 @@ Nav
 .navigation-container {
   display: flex;
   justify-content: center;
-  background-color: #4d4f73;
+  background-color: rgb(77, 76, 114);
   height: 100%;
   line-height: 2em;
 }
@@ -229,9 +228,6 @@ Dashboard
 }
 
 input.form-field1 {
-  background-image: url(https://cdn2.hubspot.net/hubfs/4004166/bioticresearch_website_assets/images/search_icon.png);
-  background-repeat: no-repeat;
-  background-position: right center;
   padding-left: 10px;
   padding-right: 5px;
 }
@@ -252,7 +248,17 @@ Traffic
 
 .traffic-nav li:hover {
   color: white;
-  background-color: #83c891;
+  background-color: rgb(129, 201, 143);
+  border-radius: 2em;
+  font-weight: bold;
+  padding: 0 0.5em;
+  height: 20px;
+  line-height: 20px;
+}
+
+.traffic-nav li:active {
+  color: white;
+  background-color: rgb(129, 201, 143);
   border-radius: 2em;
   font-weight: bold;
   padding: 0 0.5em;
@@ -273,13 +279,11 @@ ul li {
   list-style: none;
   margin-right: 8px;
   margin-left: 0;
-  /* font-weight: bold; */
   float: right;
 }
 
 .traffic-line-graph-header {
   margin-left: 20px;
-  /* width: 50%; */
 }
 
 .traffic {
@@ -319,7 +323,7 @@ Mobile Users
 */
 
 .mobile-header {
-  font-weight: 500;
+  font-weight: 700;
   text-transform: uppercase;
   margin-left: 20px;
   font-size: 1em;
@@ -340,7 +344,7 @@ Social stats
 }
 
 .social-header {
-  font-weight: 500;
+  font-weight: 700;
   text-transform: uppercase;
   margin-left: 20px;
   font-size: 120%;
@@ -357,7 +361,7 @@ Social stats
 }
 
 .social-image {
-  background-color: #fbfbfb;
+  background-color: rgb(251, 251, 251);
   border-radius: 5px;
   border: 1px solid #ddd;
   margin-top: 10px;
@@ -368,7 +372,7 @@ Social stats
 }
 
 .social svg {
-  background-color: #7578bf;
+  background-color: rgb(115, 119, 191);
   border-radius: 200%;
   display: inline-block;
   fill: white;
@@ -381,7 +385,7 @@ Social stats
 }
 
 .social-heading {
-  color: #7379bd;
+  color: rgb(115, 119, 191);
   display: block;
   font-size: 125%;
   font-weight: bold;
@@ -389,7 +393,7 @@ Social stats
 }
 
 .social-stats {
-  color: #7b7b7b;
+  color: rgb(102, 102, 102);
   font-size: 300%;
   font-weight: 300;
   margin-bottom: 10px;
@@ -409,7 +413,7 @@ New members
 */
 
 .new-members-header {
-  font-weight: 500;
+  font-weight: 700;
   text-transform: uppercase;
   display: block;
   font-size: 125%;
@@ -458,7 +462,7 @@ New members
 
 a {
   text-decoration: none;
-  color: #7578bf;
+  color: rgb(115, 119, 191);
 }
 
 p {
@@ -479,12 +483,12 @@ Recent activity
 }
 
 .time {
-  color: #7578bf;
+  color: rgb(115, 119, 191);
   font-size: 10px;
 }
 
 .arrow-right {
-  border: solid #4d4f73;
+  border: solid rgb(115, 119, 191);
   border-width: 0 3px 3px 0;
   padding-right: 5px;
   display: inline-block;
@@ -507,7 +511,7 @@ Message user
 }
 
 .mobile-header {
-  font-weight: 500;
+  font-weight: 700;
   text-transform: uppercase;
   font-size: 1em;
   margin-left: 10px;
@@ -537,10 +541,10 @@ Message user
 }
 
 .button-user {
-  background-color: #7379bd;
+  background-color: rgb(115, 119, 191);
   border-radius: 5px;
   border: 0;
-  color: #fff;
+  color: white;
   margin: 0;
   padding: 1em 2em;
   text-transform: uppercase;
@@ -580,7 +584,7 @@ Settings
 }
 
 .button-settings {
-  background-color: #7379bd;
+  background-color: rgb(115, 119, 191);
   border-radius: 5px;
   border: 0;
   color: #fff;
@@ -590,10 +594,10 @@ Settings
 }
 
 .button-disabled {
-  background-color: #b2b2b2;
+  background-color: rgb(178, 178, 178);
   border-radius: 5px;
   border: 0;
-  color: #fff;
+  color: white;
   margin: 0;
   padding: 1em 2em;
   text-transform: uppercase;
@@ -638,7 +642,7 @@ Settings
   display: block;
   overflow: hidden;
   cursor: pointer;
-  border: 2px solid #999999;
+  border: 2px solid rgb(178, 178, 178);
   border-radius: 21px;
 }
 .onOffSwitch-inner {
@@ -664,27 +668,27 @@ Settings
 .onOffSwitch-inner:before {
   content: "ON";
   padding-left: 10px;
-  background-color: #7578bf;
-  color: #ffffff;
+  background-color: rgb(115, 119, 191);
+  color: white;
 }
 .onOffSwitch-inner:after {
   content: "OFF";
   padding-right: 10px;
-  background-color: #7578bf;
-  color: #ffffff;
+  background-color: rgb(178, 178, 178);
+  color: white;
   text-align: right;
 }
 .onOffSwitch-switch {
   display: block;
   width: 16px;
   margin: 6px;
-  background: #fcf7f7;
+  background: white;
   position: absolute;
   top: 0;
   bottom: 0;
   right: 84px;
-  border: 2px solid #999999;
-  border-radius: 21px;
+  border: 2px solid rgb(178, 178, 178);
+  border-radius: 50%;
   transition: all 0.3s ease-in 0s;
 }
 .onOffSwitch-checkbox:checked + .onOffSwitch-label .onOffSwitch-inner {
@@ -761,11 +765,11 @@ main {
   }
 
   .daily {
-    border-right: 1px solid #ccc;
+    border-right: 1px solid rgb(178, 178, 178);
   }
 
   .members {
-    border-right: 1px solid #ccc;
+    border-right: 1px solid rgb(178, 178, 178);
   }
 
   .members .members-container:nth-child(2) {
@@ -781,7 +785,7 @@ main {
   }
 
   .message {
-    border-right: 1px solid #ccc;
+    border-right: 1px solid rgb(178, 178, 178);
     border-bottom: 0;
   }
 

@@ -3,18 +3,14 @@ const alertBanner = document.getElementById('alert');
 alertBanner.innerHTML = `
     <div class="alert-banner"> 
         <p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks to complete</p>
-        <p class="alert-banner-close">x</p>
+        <p class="alert-banner-close" id="banner-close">x</p>
     </div>
 `;
 
-alertBanner.addEventListener('click', e => {
-    const element = e.target;
-    if(element.classList.contains('alert-banner-close')) {
-        alert.Banner.style.display = 'none';
-    }
-});
-
-
+document.getElementById('banner-close').onclick = function() {
+    let div = this.parentElement.parentElement;
+    div.style.display = 'none';
+}
 
 
 // Line Graph
@@ -37,7 +33,7 @@ let trafficMonthly = {
     }]
 };
 
-document.querySelector('#btn4').addEventListener('click', e => {
+document.getElementById('btn4').addEventListener('click', e => {
     e.preventDefault(); // prevent browser from reloading
     trafficChart.data = trafficMonthly;
     trafficChart.update();
@@ -50,7 +46,7 @@ let trafficWeekly = {
     }]
 };
 
-document.querySelector('#btn3').addEventListener('click', e => {
+document.getElementById('btn3').addEventListener('click', e => {
     e.preventDefault();
     trafficChart.data = trafficWeekly;
     trafficChart.update();
@@ -65,7 +61,7 @@ let trafficDaily = {
     }]
 };
 
-document.querySelector('#btn2').addEventListener('click', e => {
+document.getElementById('btn2').addEventListener('click', e => {
     e.preventDefault();
     trafficChart.data = trafficDaily;
     trafficChart.update();
@@ -78,7 +74,7 @@ let trafficHourly = {
     }]
 };
 
-document.querySelector('#btn1').addEventListener('click', e => {
+document.getElementById('btn1').addEventListener('click', e => {
     e.preventDefault();
     trafficChart.data = trafficHourly;
     trafficChart.update();
@@ -154,9 +150,9 @@ const mobileData = {
         data: [2000, 550, 500],
         borderWidth: 0,
         backgroundColor: [
-            '#7477BF',
-            '#78CF82',
-            '#51B6C8'
+            'rgb(115, 119, 191)',
+            'rgb(120, 201, 143)',
+            'rgb(116, 177, 191)'
         ]
     }]
 };
@@ -179,9 +175,9 @@ let mobileChart = new Chart(mobileCanvas, {
 
 // Messaging
 
-const user = document.querySelector('#myInput');
-const message = document.querySelector('#messageField');
-const send = document.querySelector('#send');
+const user = document.getElementById('myInput');
+const message = document.getElementById('messageField');
+const send = document.getElementById('send');
 
 send.addEventListener('click', () => {
     if (user.value === '' && message.value === '') {
@@ -204,7 +200,19 @@ var modal = document.getElementById('myModal');
 var btn = document.getElementById('myBtn');
 
 // button that closes the modal
-var span = document.getElementsByClassName('close')[0];
+
+var span1 = document.getElementById('close-1');
+var span2 = document.getElementById('close-2');
+
+span1.onclick = function() {
+    let div = this.parentElement;
+    div.style.display = 'none';
+}
+
+span2.onclick = function() {
+    let div2 = this.parentElement;
+    div2.style.display = 'none';
+}
 
 // when the user clicks the button, the modal opens
 btn.addEventListener('click', event => {
@@ -212,25 +220,11 @@ btn.addEventListener('click', event => {
     event.preventDefault();
 });
 
-// when the user clicks x the modal closes
-span.onclick = function() {
-    modal.style.display = 'none';
-};
+
 
 var close = document.getElementsByClassName('close');
 var i;
 
-for(i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-        var div = this.parentElement;
-        div.style.opacity = '0';
-        setTimeout(function(){ div.style.display = 'none'; }, 600);
-    };
-};
-
-span.onclick = function() {
-    modal.style.display = 'none';
-};
 
 // when user clicks anywhere outside of the modal, it closes
 window.onclick = function(event) {

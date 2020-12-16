@@ -14,6 +14,9 @@ alertBanner.addEventListener('click', e => {
     }
 });
 
+
+
+
 // Line Graph
 
 let trafficCanvas = document.getElementById('traffic-chart');
@@ -30,6 +33,19 @@ let trafficData = {
 let trafficMonthly = {
     labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dec'],
     datasets: [{
+        data: [250, 5350, 2300, 1000, 1500, 1750, 1250, 1850, 2250, 2000, 2500, 3000]
+    }]
+};
+
+document.querySelector('#btn4').addEventListener('click', e => {
+    e.preventDefault(); // prevent browser from reloading
+    trafficChart.data = trafficMonthly;
+    trafficChart.update();
+});
+
+let trafficWeekly = {
+    labels: ['Week1', 'Week2', 'Week3', 'Week4', 'Week5', 'Week6', 'Week7', 'Week8', 'Week9', 'Week10'],
+    datasets: [{
         data: [550, 950, 1250, 2050, 3000, 4350, 300, 2000, 500, 150, 1450]
     }]
 };
@@ -38,7 +54,7 @@ document.querySelector('#btn3').addEventListener('click', e => {
     e.preventDefault();
     trafficChart.data = trafficWeekly;
     trafficChart.update();
-});
+})
 
 let trafficDaily = {
     labels: [
@@ -196,7 +212,7 @@ btn.addEventListener('click', event => {
     event.preventDefault();
 });
 
-// when the user clicks the span the modal closes
+// when the user clicks x the modal closes
 span.onclick = function() {
     modal.style.display = 'none';
 };

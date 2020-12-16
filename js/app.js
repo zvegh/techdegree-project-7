@@ -221,15 +221,12 @@ btn.addEventListener('click', event => {
 });
 
 
-
-var close = document.getElementsByClassName('close');
-var i;
-
-
 // when user clicks anywhere outside of the modal, it closes
+
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = 'none';
     }
 };
+
 

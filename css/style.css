@@ -301,7 +301,7 @@ Daily traffic
 */
 
 .daily-traffic-header {
-  font-weight: 500;
+  font-weight: 700;
   text-transform: uppercase;
   margin-left: 20px;
   font-size: 1em;
@@ -388,7 +388,7 @@ Social stats
   color: rgb(115, 119, 191);
   display: block;
   font-size: 125%;
-  font-weight: bold;
+  font-weight: 700;
   margin: 0;
 }
 
@@ -500,6 +500,10 @@ Recent activity
 
 .members-container .arrow-right {
   margin-right: 20px;
+}
+
+.activity-comment {
+  width: 90%;
 }
 
 /* 
@@ -661,7 +665,7 @@ Settings
   line-height: 28px;
   font-size: 19px;
   color: white;
-  font-family: Trebuchet, Arial, sans-serif;
+  font-family: "Montserrat", Arial, sans-serif;
   font-weight: bold;
   box-sizing: border-box;
 }
